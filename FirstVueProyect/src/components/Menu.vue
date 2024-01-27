@@ -7,7 +7,8 @@
         <li><router-link to="/contact">Contacto</router-link></li>
       </ul>
     </nav>
-  </template>
+    <button class="btn btn-success">Botón de Bootstrap</button>
+</template>
   
   <script>
   export default {

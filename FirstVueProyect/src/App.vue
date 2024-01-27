@@ -1,5 +1,8 @@
 <!-- App.vue -->
 <template>
+  <header>
+    <h1>FirstVueProyect</h1>
+  </header>
   <div id="app">
     <Menu /> <!-- Aquí se incluye el componente de menú -->
     <router-view /> <!-- Componente para mostrar las vistas de las diferentes páginas -->
