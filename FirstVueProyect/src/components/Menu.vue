@@ -1,13 +1,8 @@
 <!-- Menu.vue -->
 <template>
     <nav>
-      <ul>
-        <li><router-link to="/">Inicio</router-link></li>
-        <li><router-link to="/about">Acerca de</router-link></li>
-        <li><router-link to="/contact">Contacto</router-link></li>
-      </ul>
+      
     </nav>
-    <button class="btn btn-success">Botón de Bootstrap</button>
 </template>
   
   <script>
