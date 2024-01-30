@@ -1,54 +1,43 @@
 <template>
   <div id="app">
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">Home</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="/">
+            <img src="/src/images/logo.png" alt="" width="30" height="24">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasnavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/about">About</a>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">FirstVueProyect</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="#">Product</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="#">Community</a>
+                </li>
+              </ul>
+              <li class="nav-button">
+                <a class="btn btn-outline-primary mx-lg-2" href="#">LaunchPad</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </div>
           </div>
         </div>
       </nav>
     </header>
 
     <main class="container-fluid py-4">
-      <div class="row">
-        <div class="col-md-9">
-          <router-view /> <!-- Componente para mostrar las vistas de las diferentes páginas -->
-        </div>
-      </div>
+      <router-view /> <!-- Componente para mostrar las vistas de las diferentes páginas -->
     </main>
 
 
@@ -78,15 +67,4 @@ export default {
 
 <style>
 /* Estilos generales de la aplicación */
-@media (min-width: 992px) {
-  .col-lg-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-
-  .col-lg-9 {
-    flex: 0 0 75%;
-    max-width: 75%;
-  }
-}
 </style>
